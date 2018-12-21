@@ -22,6 +22,13 @@
         <h1 class=display-4>Survey Questions</h1>
         <p class="lead">Better grab ya dunks. This might take a few minutes.</p>
         <hr>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Name:</span>
+            </div>
+            <input type="text" class="form-control" id="nameInput" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+        </div>
+
         <h3><strong>#1</strong></h3>
         <h4>Dunks is great.</h4>
         <select class="chosen-select" id="q1">
@@ -35,7 +42,7 @@
 
         <h3><strong>#2 (Like the Yankees in the AL East)</strong></h3>
         <h4>I lock my doors in Lynn.</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q2">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - My doors were stolen)</option>
             <option value="2">2</option>
@@ -46,7 +53,7 @@
 
         <h3><strong>#3</strong></h3>
         <h4>The Best Seat At Fenway Is In The Right Field Bleachers</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q3">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - nah your wrong)</option>
             <option value="2">2</option>
@@ -57,7 +64,7 @@
 
         <h3><strong>#4</strong></h3>
         <h4>Revere Beach is the best spot to swim.</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q4">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - lmao kehd. Nahant is only a few miles away)</option>
             <option value="2">2</option>
@@ -68,7 +75,7 @@
 
         <h3><strong>#Nomar</strong></h3>
         <h4>Samuel Adams beer is the best beer in Boston</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q5">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - You're choosing Sams over Natty? Go home kehd.)</option>
             <option value="2">2</option>
@@ -79,7 +86,7 @@
 
         <h3><strong>#6</strong></h3>
         <h4>Ben Affleck is my hero</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q6">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - lmao after Dazed and Confused? Give him to New York)</option>
             <option value="2">2</option>
@@ -90,7 +97,7 @@
 
         <h3><strong>#7 TROT NIXON</strong></h3>
         <h4>The Red Line is the best train</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q7">
             <option value=""></option>
             <option value="1">1 (uh.)</option>
             <option value="2">1</option>
@@ -101,7 +108,7 @@
 
         <h3><strong>#8</strong></h3>
         <h4>The Cape is the best summer vacation spot</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q8">
             <option value=""></option>
             <option value="1">1 (ya until you get to the bridge LOL)</option>
             <option value="2">2</option>
@@ -113,7 +120,7 @@
 
         <h3><strong>#9</strong></h3>
         <h4>New Hampshire is all wilderness</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q9">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - My Aunt Stella lives there) </option>
             <option value="2">2</option>
@@ -124,7 +131,7 @@
 
         <h3><strong>#10</strong></h3>
         <h4>Belichick should've kept JimmyG</h4>
-        <select class="chosen-select" id="q1">
+        <select class="chosen-select" id="q10">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree - We have a stud) </option>
             <option value="2">2</option>
@@ -135,10 +142,20 @@
         <br>
         <br>
 
-        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+        <button type="submit" class="btn btn-primary" id="surveySubmit">Submit</button>
         <br>
         <hr>
     </div>
+
+
+    <script>
+        $("#surveySubmit").on('click', function (event) {
+            var results = {
+                name: $("#nameInput").val().trim(),
+                scores:
+        }
+        })
+    </script>
 
 </body>
 
